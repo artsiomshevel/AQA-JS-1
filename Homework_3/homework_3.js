@@ -107,11 +107,17 @@ console.log('Ответ к уравнению 2: ' + x1 +' и ' + x2)
 
 // Task3**. Напишите программу, которая принимает целое положительное число n (одно любое число от 1 до 9), и выводит сумму равную 
 // n + nn + nnn, где n не перемножаются, а конкатенируются
-let n = 2
+
+let n = 1
 let aa = n
 let bb = Number('' + n + n)
 console.log(bb)
 console.log(typeof(bb))
 let cc = Number('' + n + n + n)
-let sum = aa + bb + cc
-console.log(sum)
+let sum =0
+if (Number.isInteger(n) && n >= 1 && n <= 9) {
+  sum = aa + bb + cc
+  console.log(sum)
+} else {
+  console.log('Enter correct value')
+}
