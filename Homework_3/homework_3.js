@@ -59,7 +59,7 @@ console.log('item_6 = '+item_6)
 console.log(typeof(item_6))
 
 // 20. Присвоить переменной item_6_type тип переменной item_6
-item_6_type = 0
+item_6_type = Number(item_6_type)
 console.log(typeof(item_6_type))
 
 // 21. Вывести в консоль тип данных item_6 в виде ——  “item_6 == ”  item_6,  “item_6_type == ”  item_6_type ——  
@@ -84,24 +84,24 @@ console.log('item_7_type == ' + typeof(item_7_type) + ' ' + item_7_type)
 // Task2*. Решить квадратные уравнения. Переменные называть по правилам.
 // Вывести в консоль ответы в виде "Ответ к уравнению 1: <корень>", "Ответ к уравнению 2: <корень> и <корень>"
 // 1.  x2 - 6x + 9 = 0. - один корень
-let a = 1
-let b = -6
-let c = 9
+const a = 1
+const b = -6
+const c = 9
 
-let d = b**2 - 4*a*c
-let x = -1*b / 2 * a
+const d = b**2 - 4*a*c
+const x = -1*b / 2 * a
 console.log('Ответ к уравнению 1: ' + x)
 
 // 2.  x2 - 4x - 5 = 0. - два корня
-let a1 = 1
-let b1 = -4
-let c1 = -5
+const a1 = 1
+const b1 = -4
+const c1 = -5
 
-let d1 = b1**2 - 4*a1*c1
+const d1 = b1**2 - 4*a1*c1
 console.log(d1)
-let x1 = (-1*b1 - Math.sqrt(d1)) / 2 * a1
+const x1 = (-1*b1 - Math.sqrt(d1)) / 2 * a1
 console.log(x1)
-let x2 = (-1*b1 + Math.sqrt(d1)) / 2 * a1
+const x2 = (-1*b1 + Math.sqrt(d1)) / 2 * a1
 console.log(x2)
 console.log('Ответ к уравнению 2: ' + x1 +' и ' + x2)
 
