@@ -67,7 +67,7 @@ console.log('item_6 == ' + item_6)
 console.log('item_6_type == ' + item_6_type)
 
 // 22. Создать переменную item_7 и в ней преобразовать item_6 в String.
-let item_7 = item_6 + 'forString'
+let item_7 = String(item_6)
 console.log(item_7)
 
 // 23. Создать переменную item_7_type
