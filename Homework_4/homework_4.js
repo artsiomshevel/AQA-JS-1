@@ -39,20 +39,22 @@ switch (true) {
 // 2. Преобразовать написанный код в task 1 так, чтобы сначала проверялся тип данных. 
 //   И если он не number - кидалась ошибка в консоль.
 //   Проверить работу кода на следующих данных 17, 18, 61, "2", "aaa"
-if (typeof(age) != 'number') {
+if (typeof(age) !== 'number') {
     console.log('Enter correct value')
-} else if (age < age_2) {
-    console.log("You don't have access cause your age is "  + age + " It's less then " + age_2)
-} else if ((age >= age_2) && (age < age_3)) {
-    console.log("Welcome  !")
-} else if (age > age_3) {
-    console.log("Keep calm and look Culture channel")
 } else {
+  if (age < age_2) {
+    console.log("You don't have access cause your age is "  + age + " It's less then " + age_2)
+  } else if ((age >= age_2) && (age < age_3)) {
+    console.log("Welcome  !")
+  } else if (age > age_3) {
+    console.log("Keep calm and look Culture channel")
+  } else {
     console.log("Technical work")
+}
 }
 // 3.Преобразовать Task 2 - 1 таким образом, чтобы значение НАПРИМЕР '2' (т.е. ЛЮБАЯ строка в которой лежат ТОЛЬКО ЦИФРЫ) пропускалось, 
 //   преобразовываясь в number
-if (Number.isNaN(age) == false) {
+if (isNaN(age)) {
     console.log('You have entered Not a Number!!')
 } else { age = Number(age)
     switch (true) {
