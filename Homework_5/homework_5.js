@@ -49,23 +49,33 @@ while (i <= 5) {
 
 //   Результат должен быть округлен до 1 знака после запятой методом .toFixed(), про который надо почитать самим ;)
 
-let bytesValue = 1_454_548
+// let bytesValue = 1_454_548
 // let kbInbytes = (bytesValue/1024).toFixed(1)
 // let mbInbytes = (bytesValue/1024/1024).toFixed(1)
 // let gbInbytes = (bytesValue/1024/1024/1024).toFixed(1)
 // let tbInbytes = (bytesValue/1024/1024/1024/1024).toFixed(1)
 
-if (bytesValue < 1024) {
+let bytesValue = 111111_454_548
+if (bytesValue < 1042) {
     console.log(bytesValue.toFixed(1) + 'Bytes')
-} else if (bytesValue >= 1024 && bytesValue < 1024**2) {
-    console.log((bytesValue/1024).toFixed(1) + 'kb')
-} else if (bytesValue >= 1024**2 && bytesValue < 1024**3) {
-    console.log((bytesValue/1024/1024).toFixed(1) + 'Mb')
-} else if (bytesValue >= 1024**3 && bytesValue < 1024**4) {
-    console.log((bytesValue/1024/1024/1024).toFixed(1) + 'Gb')
-} else if (bytesValue >= 1024**4) {
-    console.log((bytesValue/1024/1024/1024/1024).toFixed(1) + 'Tb')
+} else {
+    let counter = 0
+    while (bytesValue >= 1024) {
+        bytesValue = bytesValue / 1024
+        counter++
+    }
+    if (counter === 1) {
+        console.log((bytesValue).toFixed(1) + 'kb')
+    } else if (counter === 2) {
+        console.log((bytesValue).toFixed(1) + 'Mb')
+    } else if (counter === 3) {
+        console.log((bytesValue).toFixed(1) + 'Gb')
+    } else if (counter === 4) {
+        console.log((bytesValue).toFixed(1) + 'Tb')
+    }
 }
+
+  
 
 // 2. Сделать из "*" в консоли равнобедренный треугольник и ромб
 //треугольник
@@ -91,13 +101,14 @@ for (let i = 0; i < rowsNumber; i++) {
 //     Если число делится на 5 без остатка, то то выведете в консоль “число - делится на 5”.
 //     Если число делится и на 3 и на 5 без остатка, то то выведете в консоль “число - делится и на 3 на 5”.
 //     Число 15 делится без остатка на 3 и на 5 -- пример сообщения в консоле.
+
 for (let i = 1; i <= 100; i++) {
-    if (i % 3 === 0) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log(`число ${i} делится без остатка на 3 и на 5 `)
+    } else if(i % 3 === 0) {
         console.log(`число ${i} делится без остатка на 3`)
     } else if (i % 5 === 0) {
         console.log(`число ${i} делится без остатка на 5`)
-    } else if (i % 3 === 0 && i % 5 === 0) {
-        console.log(`число ${i} делится без остатка на 3 и на 5 `)
     } else {
         console.log(i)
     } 
