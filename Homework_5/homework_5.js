@@ -93,8 +93,33 @@ for (let i = 0; i < rowsNumber; i++) {
     console.log(row)
 }
 
-//ромб ???
-
+//ромб 
+let rowsNumber = 5
+let halfRowsNumber = rowsNumber - 1
+for (let i = 0; i < rowsNumber; i++) {
+    let row = ''
+    //loop for " "
+    for (let j = 0; j < rowsNumber - i - 1; j++) {
+        row += ' '
+    }
+    //loop for *
+    for (let k = 0; k < (2*i + 1); k++) {
+        row += '*'
+    }
+    console.log(row)
+}
+for ( let i = rowsNumber - 2; i >= 0; i--) {
+    let row = ""
+    //loop for " "
+    for (let j = 0; j < halfRowsNumber - i; j++) {
+        row += " "
+    }
+    //loop for *
+    for (let j = 0; j < 2*i + 1; j++){
+        row += "*"
+    }
+    console.log(row)
+}
 
 // 3.  Вам нужно вывести в консоль числа от 1 до 100.
 //     Если число делится без остатка на 3, то выведете в консоль “число - делится на 3”.
