@@ -86,6 +86,8 @@ function getWordWithMaxCharacters(sentense) {
 }
 
 getWordWithMaxCharacters('and home and')
+// TODO: For this task it will be enough to use one loop
+// Try to refactor
 
 // 3. Напишите функцию, которая принимает на вход массив чисел, убирает из него дубликаты и возвращает массив с только уникальными значениями.
 
