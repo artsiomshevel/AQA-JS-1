@@ -16,9 +16,7 @@ function getEmployeeInfo(name) {
     for (let i = 0; i < employeeNames.length; i++) {
       
         if (name === employeeNames[i]) {
-            result.push(employeeNames[i])
-            result.push(employeeSalary[i])
-            return result
+            return [employeeNames[i], employeeSalary[i]]
         }
     }
 
@@ -40,6 +38,12 @@ console.log(getEmployeeInfo('Dani'))
 function getUniquePizzaName(name) {
     const competitorPizzas = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai']
     const result = []
+    const competitorPizzas1 =[]
+
+    for (let i = 0; i < competitorPizzas.length; i++) {
+
+        competitorPizzas1.push(competitorPizzas[i].toLowerCase());
+    }
 
     for (let i = 0; i < name.length; i++) {
         
@@ -49,14 +53,10 @@ function getUniquePizzaName(name) {
 
     }
 
-    if (result.length == 0) {
-        return null
-    } else {
-        return result
-    }
+    return result.length === 0 ? null : result
 }
 
-console.log(getUniquePizzaName(['Peperoni', 'Diablo', '4 cheeses', 'hawai', '111', '4 444',]))
+console.log(getUniquePizzaName(['peperoni', 'Diablo', '4 cheeses', 'hawai', '111', '4 444',]))
 
 // 2. Написать функцию, которая принимает предложение (слова разделенные только пробелами) в качестве параметра и выводит в консоль слово с наибольшим количеством букв. 
 //   Если таких слов несколько - выводит их все.
