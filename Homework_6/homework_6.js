@@ -63,27 +63,38 @@ console.log(getUniquePizzaName(['peperoni', 'Diablo', '4 cheeses', 'hawai', '111
 
 function getWordWithMaxCharacters(sentense) {
     const arr = sentense.split(' ')
-    let counter = 0
-    let newArr = []
-
-    for (i = 0; i < arr.length; i++) {
-
-        if (arr[i].length > counter) {
-            counter = arr[i].length
-        }
-
+    let newArr= []
+    for (let i = 0; i < arr.length; i++) {
+    if(!newArr.length || newArr[0].length < arr[i].length) {
+       newArr  = [arr[i]]
+    } else if(newArr[0].length === arr[i].length) {
+       newArr.push(arr[i])
     }
-
-    for(let i = 0; i < arr.length; i++){
-
-        if (arr[i].length === counter) {
-            newArr.push(arr[i])
-        }
-
+    return newArr.length ? newArr : newArr[0]
     }
-
-    console.log(newArr.join(' '))
 }
+
+//     let counter = 0
+//     let newArr = []
+
+//     for (i = 0; i < arr.length; i++) {
+
+//         if (arr[i].length > counter) {
+//             counter = arr[i].length
+//         }
+
+//     }
+
+//     for(let i = 0; i < arr.length; i++){
+
+//         if (arr[i].length === counter) {
+//             newArr.push(arr[i])
+//         }
+
+//     }
+
+//     console.log(newArr.join(' '))
+// }
 
 getWordWithMaxCharacters('and home and')
 // TODO: For this task it will be enough to use one loop
